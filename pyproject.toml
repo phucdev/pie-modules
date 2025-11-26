@@ -25,15 +25,13 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9"
 # TODO: remove and use pie-core instead
-pytorch-ie = ">=0.31.9,<0.33.0"
+pytorch-ie = "0.31.8"
 pytorch-lightning = "^2.1.0"
 torchmetrics = "^1"
-# >=4.35 because of BartModelWithDecoderPositionIds, <4.37 because of generation config
-# created from model config in BartAsPointerNetwork
-transformers = ">=4.35.0,<4.37.0"
+transformers = ">=4.54.1,<5"
 
 [tool.poetry.group.dev.dependencies]
-torch = {version = "^2.1.0+cpu", source = "pytorch"}
+torch = {version = ">=1.10,<=2.2.2", source = "pypi"}
 pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
 pre-commit = "^3.4.0"
